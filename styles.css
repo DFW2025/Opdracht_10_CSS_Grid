@@ -1,0 +1,126 @@
+/*  Mobile First */
+
+html, body {
+  background-color: #ffeead;
+  margin: 10px;
+}
+
+h1 {font-family: Verdana, Geneva, Tahoma, sans-serif;display: flex;justify-content: center;}
+
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffeead;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat (1, 1fr) ;
+    grid-template-rows: 100px 250px 200px 100px;
+    grid-gap: 3px;
+}
+
+.header {
+  background-color: #96ceb4;
+  	
+}
+
+.main {
+  background-color: #88d8b0;
+}
+
+.widget {
+      background-color: #ff6f69;
+}
+
+.footer {
+      background-color: #ffcc5c;
+}
+
+/*  Desktop/Tablet Second */
+
+@media screen and (min-width:768px) {
+
+html, body {
+  background-color: #ffeead;
+  margin: 10px;
+}
+
+h1 {font-family: Verdana, Geneva, Tahoma, sans-serif;display: flex;justify-content: center;color: blue;}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px 600px 100px;
+    grid-gap: 3px;
+}
+
+
+.header {
+  background-color: #96ceb4;
+  grid-row: 1 / -1;
+  grid-column: 1 / 4;
+}
+
+.main {
+  background-color: #88d8b0;
+  grid-column: 4 / -1;
+}
+
+.widget {
+      background-color: #ff6f69;
+      grid-column: 4 / -1;
+}
+
+.footer {
+      background-color: #ffcc5c;
+      grid-column: 4 / -1;
+}}
+
+/*  Large Screens */
+
+@media screen and (min-width:1024px) {
+
+html, body {
+  box-sizing: border-box;
+  background-color: #ffeead;
+  height: 100%;
+  padding: 10px;
+  margin: 0px;
+}
+
+h1 {font-family: Verdana, Geneva, Tahoma, sans-serif;display: flex;justify-content: center;color: crimson;}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 3px;
+    grid-template-areas: 
+        "h h m m m m m m m m w w"
+        "h h m m m m m m m m w w"
+        "h h f f f f f f f f w w";
+}
+
+.header {
+  background-color: #96ceb4;
+  grid-area: h;
+}
+
+.main {
+  background-color: #88d8b0;
+  grid-area: m;
+}
+
+.widget {
+      background-color: #ff6f69;
+     grid-area: w; 
+}
+
+.footer {
+      background-color: #ffcc5c;
+      grid-area: f;
+}}
+
